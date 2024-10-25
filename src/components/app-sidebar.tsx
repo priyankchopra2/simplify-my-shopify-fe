@@ -1,5 +1,5 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
-
+import { Calendar, Home, Inbox, Search, Settings,MessageSquareMore, ChartBarBig, MessageCircleQuestion, BadgeDollarSign, Flame } from "lucide-react"
+import { Link } from "react-router-dom";
 import {
   Sidebar,
   SidebarContent,
@@ -15,28 +15,39 @@ import {
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/home",
     icon: Home,
   },
   {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
-  },
-  {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
-  },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
-  },
-  {
     title: "Settings",
-    url: "#",
+    url: "/settings",
     icon: Settings,
+  },
+  {
+    title: "SMS Pricing",
+    url: "/sms-pricing",
+    icon: MessageSquareMore,
+  },
+  {
+    title: "Analytics",
+    url: "/analytics",
+    icon: ChartBarBig,
+  },
+  {
+    title: "FAQ",
+    url: "/faqs",
+    icon: MessageCircleQuestion,
+  },
+  {
+    title: "Subscription",
+    url: "/subscriptions",
+    icon: BadgeDollarSign,
+  },
+  ,
+  {
+    title: "Firebase",
+    url: "/firebase",
+    icon: Flame,
   },
 ]
 
@@ -51,10 +62,10 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link to={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
