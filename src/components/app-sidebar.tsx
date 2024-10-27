@@ -10,6 +10,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { useEffect, useState } from "react";
 
 // Menu items.
 const items = [
@@ -52,16 +53,32 @@ const items = [
 ]
 
 export function AppSidebar() {
+  // console.log(window.location.pathname);
+  const [pathUrl,setPathUrl] = useState(window.location.pathname)
+
+  let handleChangeUrl = (url) => {{
+    // setPathUrl(window.location.pathname)
+    setPathUrl(url)
+  }}
+
+  useEffect(() => {
+
+  },[pathUrl])
+  
+  
   return (
-    <Sidebar>
+    <Sidebar >
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>
+            {/* Application  */}
+            Simplify My Login
+            </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton asChild onClick={()=>handleChangeUrl(item.url)} isActive={ pathUrl == item.url ? true : false } >
                     <Link to={item.url}>
                       <item.icon />
                       <span>{item.title}</span>

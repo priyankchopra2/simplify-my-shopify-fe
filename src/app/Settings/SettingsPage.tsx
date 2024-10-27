@@ -6,9 +6,11 @@ function SettingsPage() {
 
 
   return (
-    <>
+    <div>
     Settings Page
-    </>
+    <br />
+    Congratulations!!! You have successfully installed the{" "}
+    </div>
   )
 }
 
