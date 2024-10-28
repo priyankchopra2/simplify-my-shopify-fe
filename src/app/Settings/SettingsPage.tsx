@@ -9,7 +9,7 @@ function SettingsPage() {
     <div>
     Settings Page
     <br />
-    Congratulations!!! You have successfully installed the{" "}
+    {/* Congratulations!!! You have successfully installed the{" "} */}
     </div>
   )
 }
