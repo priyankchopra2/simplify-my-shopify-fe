@@ -64,7 +64,7 @@ function FaqPage() {
       <Accordion
         type="single"
         collapsible
-        className="sm:[100%] w-full p-5 rounded-md bg-mauve6 shadow-[0_2px_10px] shadow-black/5"
+        className=" sm:w-[960px] w-full p-5 rounded-md bg-mauve6 shadow-[0_2px_10px] shadow-black/5"
       >
         {qaList.map((item, index) => (
           <AccordionItem value={index.toString()}>
