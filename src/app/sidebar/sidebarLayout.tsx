@@ -17,7 +17,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <SidebarProvider>
       <AppSidebar />
       <main style={{textAlign:"left"}}>
-        {/* <SidebarTrigger /> */}
+        {/* todo: if width is max hide below sidebar if width is small then show it */}
+        <SidebarTrigger />
         {children}
       </main>
     </SidebarProvider>

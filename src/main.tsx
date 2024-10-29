@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./app/Home/HomePage.tsx";
 import Layout from "./app/sidebar/sidebarLayout.tsx";
 import SettingsPage from "./app/Settings/SettingsPage.tsx";
+import FaqPage from "./app/Faq/FaqPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
   {
     path: "/faqs",
     element: <App>
-      <></>
+      <FaqPage></FaqPage>
     </App>,
   },
   {
