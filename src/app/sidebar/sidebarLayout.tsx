@@ -1,6 +1,7 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/app-sidebar"
 import { useEffect, useState } from "react";
+import { NavigationMenuDemo } from "@/app/nav/nav";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 
@@ -14,13 +15,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 
   return (
-    <SidebarProvider>
-      <AppSidebar />
+    // <SidebarProvider>
+    //   <AppSidebar />
       <main style={{textAlign:"left"}}>
+        <NavigationMenuDemo></NavigationMenuDemo>
+        {/* <div className="overflow-hidden rounded-lg border bg-background shadow p-10"> */}
+
         {/* todo: if width is max hide below sidebar if width is small then show it */}
-        <SidebarTrigger />
+        {/* <SidebarTrigger /> */}
         {children}
+        {/* </div> */}
       </main>
-    </SidebarProvider>
+      
+    // </SidebarProvider>
   )
 }

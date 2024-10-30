@@ -7,7 +7,7 @@ function HomePage() {
 
   return (
     <>
-      <h4 className="text-xl text-muted-foreground">Home</h4>
+      {/* <h4 className="text-xl text-muted-foreground">Home</h4> */}
       <br />
       <br />
       <Alert>

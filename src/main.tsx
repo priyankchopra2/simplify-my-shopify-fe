@@ -8,11 +8,16 @@ import HomePage from "./app/Home/HomePage.tsx";
 import Layout from "./app/sidebar/sidebarLayout.tsx";
 import SettingsPage from "./app/Settings/SettingsPage.tsx";
 import FaqPage from "./app/Faq/FaqPage.tsx";
+// import  { Redir } from 'react-router-dom'
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App><></></App>,
+    element:  <App>
+    {/* return <Redirect to='/home'  /> */}
+    <></>
+  </App>,
   },
   {
     path: "/home",

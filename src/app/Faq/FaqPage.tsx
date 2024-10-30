@@ -57,14 +57,14 @@ function FaqPage() {
 
   return (
     <>
-      <h4 className="text-xl text-muted-foreground">FAQs</h4>
+      {/* <h4 className="text-xl text-muted-foreground">FAQs</h4> */}
       <br />
       <br />
       {/* <Alert> */}
       <Accordion
         type="single"
         collapsible
-        className=" sm:w-[960px] w-full p-5 rounded-md bg-mauve6 shadow-[0_2px_10px] shadow-black/5"
+        className="  w-full p-5 rounded-md bg-mauve6 shadow-[0_2px_10px] shadow-black/5"
       >
         {qaList.map((item, index) => (
           <AccordionItem value={index.toString()}>
